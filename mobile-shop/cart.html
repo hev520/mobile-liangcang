@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>粮仓手机版</title>
+        <link rel="stylesheet" href="styles/reset.css">
+        <link rel="stylesheet" href="styles/cart.css">
+    </head>
+    <body>
+    	<!-- 头部 -->
+        <header>
+            <div class="detail_logo">
+                <a href="index.html"><img src="images/detail_logo.png" alt=""></a>
+                <a href="index.html">首页</a>
+            </div>
+            <div class="detail_user">
+              <a href="" style="display: none;">登录</a>
+              <a href="cart.html"><img src="images/detail_cart.png" alt=""></a>
+              <a href=""><img src="images/detail_user.png" alt=""></a>
+            </div>            
+        </header>
+        <div class="buttom">
+			<a href="" class="service">结算</a>
+		</div>
+		<!-- 底部 -->
+	    <footer>
+	    	<a href=""><img src="images/index.png" alt="" style="opacity: 1"></a>
+	    	<a href="list.html"><img src="images/sort.png" alt=""></a>
+	    	<a href=""><img src="images/shoping_cart.png" alt=""></a>
+	    	<a href="login.html" class="rg"><img src="images/register.png" alt=""></a>
+	    	<a href="order.html" class="order"><img src="images/order.png" alt=""></a>
+	    </footer>
+	    <script type="text/javascript" src="scripts/jquery.min.js"></script>
+	    <!-- <script type="text/javascript" src="scripts/cart.js"></script> -->
+	    <script type="text/javascript" src="scripts/changkun.js"></script>
+	    <script type="text/javascript">
+		    if (localStorage.getItem('token')) {
+		    	var oRg=document.getElementsByClassName('rg');
+		    	var oRder = document.getElementsByClassName('order');
+		    	oRg[0].style.display="none";
+		    	oRder[0].style.display="block";
+		    }
+	    </script>
+    </body>
+</html>

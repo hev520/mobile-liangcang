@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>粮仓搜索页</title>
+        <link rel="stylesheet" href="styles/reset.css">
+        <link rel="stylesheet" href="styles/search.css">
+    </head>
+    <body>
+    	<!-- 头部 -->
+    	<header>
+    		<div class="search_box">
+    			<input id="search_goods" type="text" placeholder="搜索">
+    		</div>
+    		<div class="search_btn"></div>
+    	</header>
+    	<main>
+    		<ul class="search_goods"></ul>
+    	</main>
+		<!-- 底部 -->
+	    <footer>
+	    	<a href="index.html"><img src="images/index.png" alt="" style="opacity: 1"></a>
+	    	<a href=""><img src="images/sort.png" alt=""></a>
+	    	<a href=""><img src="images/shoping_cart.png" alt=""></a>
+	    	<a href="login.html" class="rg"><img src="images/register.png" alt=""></a>
+	    	<a href="order.html" class="order"><img src="images/order.png" alt=""></a>
+	    </footer>
+
+	    <script type="text/javascript" src="scripts/jquery.min.js"></script>
+	    <script type="text/javascript" src="scripts/changkun.js"></script>
+        <script type="text/javascript" src="scripts/search.js"></script>
+	    <script type="text/javascript">
+		    if (localStorage.getItem('token')) {
+		    	var oRg=document.getElementsByClassName('rg');
+		    	var oRder = document.getElementsByClassName('order');
+		    	oRg[0].style.display="none";
+		    	oRder[0].style.display="block";
+		    }
+		  
+	    </script>
+    </body>
+</html>

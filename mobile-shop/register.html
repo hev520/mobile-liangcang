@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>粮仓注册页面</title>
+        <link rel="stylesheet" href="styles/reset.css">
+        <link rel="stylesheet" href="styles/register.css">
+    </head>
+    <body>
+      <header>
+      	<div class="logo">
+      	  <a href="index.html">首页</a>
+      	</div>
+      </header>
+      <main>
+      	<form action="action">
+      		<div class="tell_number">
+      			用户名:<input type="number" name="tell_number" placeholder="用户名">
+            <!-- <span>获取验证码</span> -->
+      		</div>
+      		<div class="password">
+      			用户密码:<input type="password" name="password" placeholder="输入密码">
+            <!-- <span></span> -->
+      		</div>
+      		<div class="checked">
+      			<input type="checkbox" value="1" checked="checked">
+      			<span>自动登录</span>
+      		</div>
+      		<div class="login">
+      			<input type="button" id="login" value="注册">
+      		</div>
+      		<div class="id_login">
+      			<a href="login.html">用已有账号登录></a>
+      		</div>
+      	</form>
+      </main>
+      <script type="text/javascript" src="scripts/jquery.min.js"></script>
+      <script type="text/javascript">
+       $(function(){
+        $('input[name="username"]').blur(function(){
+          console.log(.$(this).val());
+          $.ajax({
+            "url":"http://h6.duchengjiu.top/shop/api_user.php",
+            "type":"POST",
+            "data":{
+              "status":"check",
+              "username":$(this).val()
+            },
+            "dataType":"jason",
+            "success":function(response){
+              console.log(response)
+              if (response.code === 0) {
+                $("span[class='success']").show();
+                $("span[class='error']").hiden();
+              }else if (response.code === 2001) {
+                $('span[class=')
+              }
+            }
+          })
+        })
+       })
+
+      </script>
+    </body>
+</html>
